@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">INÍCIO</a>
+            <a href="index.html">SUA ESCOLHA</a> 
+            <a href="feedback.html">DÊ O SEU FEEDBACK</a>
+            <a href="rastreio.html">ACOMPANHE O SEU PEDIDO</a>
+        </nav>
+    </header>
+
+    <header>
+        <img src="Screenshot_23.png" alt="Imagem Moda da Casa">
+    </header>
+
+    <h1>A melhor escolha!</h1>
+
+    <form id="pedidoForm" action="pedidosfeito.html" method="GET">
+        <p>
+            <!-- Seção de Lanches -->
+            <label for="pedido">PEDIDO:</label><br>
+            <input type="checkbox" name="pedido" value="BLUSA ROSA SIMPLES"> BLUSA ROSA SIMPLES <br>
+            <input type="checkbox" name="pedido" value="BLUSA ROSA ESCURO"> BLUSA ROSA ESCURO <br>
+            <input type="checkbox" name="pedido" value="CONJUNTO ROSA VIVO">CONJUNTO ROSA VIVO <br>
+            <input type="checkbox" name="pedido" value="CONJUNTO ROSA PRINCESA"> CONJUNTO ROSA PRINCESA<br>
+            <input type="checkbox" name="pedido" value="BLUSA AZUL OCEANO"> BLUSA AZUL OCEANO <br>
+            <input type="checkbox" name="pedido" value="BLUSA AZUL FRANBOESA"> BLUSA AZUL FRANBOESA <br>
+            <input type="checkbox" name="pedido" value="VESTIDO BRANCO FLORESTA-AMADA"> VESTIDO BRANCO FLORESTA-AMADA <br>
+            <input type="checkbox" name="lanches" value="VESTIDO FEMININO SOLTO, FRANSEZA PRETO">VESTIDO FEMININO SOLTO, FRANSEZA PRETO <br>
+            <input type="checkbox" name="pedido" value="CALÇA JEANS DECORADA"> CALÇA JEANS DECORADA <br>
+            <input type="checkbox" name="pedido" value="CALÇA PRETA"> CALÇA PRETA <br><br>
+
+            <!-- Seção de Bebidas -->
+            <label for="promoções">PROMOÇÕES:</label><br>
+            <input type="checkbox" name="promoções" value="SAÍDA DE PRÁIA PRETA">SAÍDA DE PRÁIA PRETA <br>
+            <input type="checkbox" name="promoções" value="CONJUNTO PRETO"> CONJUNTO PRETO <br>
+            <input type="checkbox" name="promoções" value="CONJUNTO"> CONJUNTO <br>
+            <input type="checkbox" name="promoções" value="CONJUNTO ROSA SEREIA"> CONJUNTO ROSA SEREIA <br>
+            <input type="checkbox" name="promoções" value="CROPPED ROSA CLARO"> CROPPED ROSA CLARO <br>
+            <input type="checkbox" name="promoções" value="CROPPED BRANCO"> CROPPED BRANCO <br>
+            <input type="checkbox" name="bebidas" value="CROPPED ROSA PASTEL"> CROPPED ROSA PASTEL <br>
+            <input type="checkbox" name="promoções" value="BIQUÍNI AZUL PETRÓLEO"> BIQUÍNI AZUL PETRÓLEO <br>
+            <br>
+
+            <!-- Endereço do cliente -->
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" required><br><br>
+
+            <label for="rua">Rua e número de residência:</label>
+            <input type="text" name="rua" id="rua" required><br><br>
+
+            <!-- Área de residência -->
+            <label for="area">Em que área você reside?</label><br>
+            <input type="radio" value="Rural" name="area" id="area_rural" required> Rural<br>
+            <input type="radio" value="Urbana" name="area" id="area_urbana" required> Urbana<br><br>
+
+            <!-- Tipo de moradia -->
+            <label for="tipo_moradia">Tipo de moradia:</label><br>
+            <input type="radio" value="Apartamento" name="tipo_moradia" id="tipo_moradia_apartamento" required> Apartamento<br>
+            <input type="radio" value="Casa" name="tipo_moradia" id="tipo_moradia_casa" required> Casa<br><br>
+
+            <!-- Observações adicionais -->
+            <label for="observacoes">Alguma observação?</label><br>
+            <textarea name="observacoes" id="observacoes" rows="4" cols="20">Observações aqui!</textarea><br><br>
+
+            <button type="submit">Enviar</button><br><br>
+        </p>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Luxe Basics. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Impede o envio automático do formulário, apenas redireciona para a página pedidosfeito.html
+        document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+            window.location.href = 'pedidosfeito.html'; // Redireciona para pedidosfeito.html
+        });
+    </script>
+</body>
+</html>
